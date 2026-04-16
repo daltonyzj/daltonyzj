@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+/*MAIN CSS*/
+:root{
+    --white: #FBFAF8;
+    --black: #131315;
+    --accent: #5278c4;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Rubik, Segoe UI;
+}
+
+body{
+    background-color: var(--white);
+}
+
+h1, h2, h3{
+    font-family: Space Grotesk;
+}
+
+h1{
+    font-size: clamp(2rem, 10vw, 6rem);
+    text-decoration: underline;
+}
+
+h2{
+    font-size: clamp(0.2rem, 5vw, 2.5rem);
+    text-decoration: underline;
+}
+
+
+nav{
+    margin: 0em auto 0em auto;
+    width: 100%;
+    padding: 1.2em ;
+    background-color: var(--black);
+    display: block;
+    position: fixed;
+    z-index: 11;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 2em;
+    color: var(--white);
+    font-size: clamp(0.75rem, 3vw, 1rem);
+}
+
+nav li:first-child{
+    margin-right: auto;
+    font-weight: bold;
+    font-family: Space Grotesk;
+    text-decoration: underline;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+header, section{
+    margin: 0em auto;
+    width: 100%;
+}
+
+header{
+    padding: 8em min(10em, 5%);
+    height: 100vh;
+    align-content: center;
+    background-image: url('images/textbkgimg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+header > div{
+    background-color: var(--white);
+    padding: clamp(1rem, 5vw, 2.5rem);
+    border-radius: 1em;
+}
+
+section{
+    padding: 4em min(10em, 5%);
+}
+
+header p{
+    font-size: clamp(0.1rem, 3vw, 1.15rem);
+}
+
+p{
+    font-size: clamp(0.1rem, 3vw, 1.15rem);
+    line-height: 1.3;
+}
+
+.white{
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.black{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
+.text-container{
+    flex: 0 1 45em;
+}
+
+img{
+    border-radius: 8px;
+    border-color: var(--white);
+    border: 2px solid;
+}   
+
+.home img{
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+}
+
+.cta-button{
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--white);
+    color: var(--black);
+    font-size: clamp(0.4rem, 3.5vw, 1.1rem);
+    padding: 0.8em;
+    border-radius: 5em;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.alt{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.cta-button:hover{
+    transform: scale(1.07);
+    transition: 0.3s;
+}
+
+footer{
+    padding: 2em;
+    text-align: center;
+    font-size: clamp(0.2rem, 2.5vw, 0.8rem);
+}
+
+footer a{
+    margin: 0 1em;
+    text-decoration: none;
+    color: var(--black);
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+/*PORTFOLIO CSS*/
+
+details{
+    width: min(55em, 85%);
+    padding: 1em;
+    background-color: var(--white);
+    color: var(--black);
+    font-size: large;
+    border-radius: 0.5em;
+}
+
+summary{
+    padding: clamp(0.02rem, 0.4vw, 0.5em);
+    font-weight: bold;
+    font-size: clamp(0.1rem, 3.5vw, 1.2rem);
+    transition-duration: 400ms;
+}
+
+section .dropdowns{
+    display: grid;
+    place-items: center;
+}
+
+summary:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: clamp(0.13rem, 3.6vw, 1.24rem);
+    transition-duration: 400ms;
+
+}
+
+.detail{
+    display: grid;
+    place-items: center;
+}
+
+.detaildesc{
+    text-align: left;
+    padding: 0.5em;
+    line-height: 150%;
+    max-width: 900px;
+}
+
+#projects .detaildesc > p:first-child{
+    font-weight: bold;
+    font-size: clamp(0.1rem, 3.5vw, 1.2rem);
+    line-height: 1.3;
+}
+
+#competitions .detaildesc > p:nth-child(2){
+    font-weight: bold;
+    font-size: clamp(0.1rem, 3.5vw, 1.2rem);
+    line-height: 1.3;
+}
+
+.carousel {
+    position: relative;
+    width: min(700px, 95%);
+    aspect-ratio: 7 / 5;
+    margin: auto;
+    overflow:visible;
+}
+
+.carousel ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: calc(100%-2px);;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+}
+
+.slide[data-active] {
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+}
+
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    box-sizing: border-box;
+    display: block;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    color: white;
+    border: none;
+    font-size: clamp(0.1rem, 3vw, 1.2rem);
+    padding: 0.4em 0.7em;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 0.3em;
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+.carousel-btn:hover {
+    background: rgba(0,0,0,0.7);
+}
+
+/*notes css*/
+
+table {
+    width: clamp(38em, 85vw, 60em); /*60 to 38*/
+    table-layout: auto;
+    border: 1px solid var(--white);
+    border-collapse: collapse;
+}
+
+.table-container{
+    overflow-x: auto;
+}
+
+tr{
+    text-align: left;
+}
+
+th{
+    font-size: 1.2em;
+    background-color: var(--white);
+    color: var(--black);
+    padding: .2em;
+}
+
+table a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+table a:hover{
+    text-decoration: underline;
+}
+
+td{
+    padding: 0.4em;
+}
+
+td:first-child,tr:first-child{
+    width: clamp(6em, 30w, 30em); /*30 to 8*/
+}
+
+label{
+    font-size: large;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1rem;
+}
+
+.filter label {
+  font-weight: 500;
+  color: var(--white);
+}
+
+.filter select {
+  padding: 0.55rem 2rem 0.55rem 0.75rem;
+  font-family: Rubik, sans-serif;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.filter input {
+  padding: 0.55rem 2rem 0.55rem 0.75rem;
+  font-family: Rubik, sans-serif;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  background-color: var(--white);
+  color: var(--black);
+  width: 8em;
+}
+
